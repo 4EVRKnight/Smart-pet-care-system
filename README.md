@@ -45,3 +45,51 @@ following are the pin connections with numbers on my Arduino UNO,
 A0- Water Level Sensor
 "
 
+
+## Features
+
+1. **RFID-Controlled Pet Gate**: 
+   - Uses an RC522 RFID module to detect a specific RFID tag attached to your pet's collar.
+   - Opens a servo-controlled gate for 5 seconds when the tag is detected, allowing the pet to enter or exit.
+   - Automatically closes the gate after 5 seconds.
+
+2. **Automated Food Dispenser**: 
+   - Dispenses food every 6 hours using a servo motor to control the food release mechanism.
+   - Integrated ultrasonic sensor monitors the food level, triggering an LED to blink when the food is low.
+
+3. **Water Level Management**: 
+   - Monitors the water level in a bowl using a water level sensor.
+   - Activates a water pump for 5 seconds to refill the bowl when the water level drops below a specified threshold.
+
+## Technical Details
+
+- **Arduino Uno** is the main microcontroller.
+- **RC522 RFID Module** detects the pet's RFID tag.
+- **Servo Motors** (Servo1 for gate control, Servo2 for food dispensing) manage physical movements.
+- **Ultrasonic Sensor** monitors the food level.
+- **Water Level Sensor** and **Water Pump** maintain water availability.
+- **Non-blocking Code**: The project utilizes the `millis()` function to manage timing events, ensuring simultaneous operation of all components without delays.
+
+## Hardware Requirements
+
+- Arduino Uno
+- RC522 RFID Module
+- 2x Servo Motors
+- Ultrasonic Sensor
+- Water Level Sensor
+- Water Pump
+- LEDs
+- Breadboard and connecting wires
+
+## How It Works
+
+This system is designed to operate autonomously, providing food and water to your pet while ensuring they can move in and out of a designated area. The use of non-blocking code ensures that the system remains responsive, handling multiple tasks at once without interruption.
+
+## Installation and Setup
+
+1. Clone the repository.
+2. Connect the hardware components according to the provided pin configuration.
+3. Upload the Arduino code to your Arduino Uno.
+4. Place the RFID tag on your pet's collar.
+5. Power the system and monitor its operation.
+
